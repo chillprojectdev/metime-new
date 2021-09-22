@@ -9,9 +9,12 @@ use Illuminate\Http\Request;
 use Kreait\Firebase\Auth as FirebaseAuth;
 use Kreait\Firebase\Exception\FirebaseException;
 use Illuminate\Validation\ValidationException;
+use Kreait\Firebase\Auth\SignInResult\SignInResult;
+use Session;
 
 use Auth;
 use App\Models\User;
+use App\Models\UserData;
 
 class LoginController extends Controller
 {
@@ -49,8 +52,24 @@ class LoginController extends Controller
        try {
           $signInResult = $this->auth->signInWithEmailAndPassword($request['email'], $request['password']);
           $user = new User($signInResult->data());
-          $result = Auth::login($user);
-          return redirect($this->redirectPath());
+
+          //create uid session
+         $user_uid = $signInResult->firebaseUserId();
+         Session::put('uid', $user_uid);
+         $result = Auth::login($user);
+
+         $auth_type = ISSET($request['auth_type']) ? $request['auth_type'] : 'public';
+
+         if ($auth_type == 'admin') {
+            $admin = UserData::getUserInternal($user_uid);
+            if ($admin != null) {
+               return redirect()->route('admin.dashboard');
+            } else {
+               throw ValidationException::withMessages([$this->username() => [trans('auth.failed')],]);
+            }
+         } else {
+            return redirect($this->redirectPath());
+         }
        } catch (FirebaseException $e) {
           throw ValidationException::withMessages([$this->username() => [trans('auth.failed')],]);
        }

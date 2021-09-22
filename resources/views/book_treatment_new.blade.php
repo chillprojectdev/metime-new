@@ -1,114 +1,241 @@
 @extends('layouts.app_main')
 
+@section('style')
+<link rel='stylesheet' href='assets/jacqueline/js/vendor/prettyPhoto/prettyPhoto.css' type='text/css' media='all' />
+<link rel='stylesheet' href='assets/jacqueline/js/vendor/woo/woocommerce-layout.css' type='text/css' media='all' />
+<link rel='stylesheet' href='assets/jacqueline/js/vendor/woo/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' href='assets/jacqueline/js/vendor/woo/woocommerce.css' type='text/css' media='all' />
+<link rel='stylesheet' href='assets/jacqueline/js/vendor/woo/plugin.woocommerce.css' type='text/css' media='all' />
+@endsection
+
 @section('content')
-<div class="page_content_wrap page_paddings_no">
-    <div class="content_wrap">
-        <div class="content">
-            <article class="post_item post_item_single page">
-                <section class="post_content">
-                  <div data-sc-full-width="true" data-sc-full-width-init="false" class="sc_row row sc_custom_1459259915855">
-                      <div class="column sc_column_container sc_col-sm-12">
-                          <div class="sc_column-inner ">
+<article class="post_item post_item_single post_item_product">
+    <div class="product">
+        <div class="images">
+            <a href="assets/images/treatments/treatment-mask-370x370.jpg" class="woocommerce-main-image zoom" title="" data-rel="prettyPhoto">
+                <img width="auto" height="auto" src="assets/images/treatments/treatment-mask-370x370.jpg" class="attachment-shop_single size-shop_single " alt="" title="3473311970015_94"/></a>
+        </div>
+        <div class="summary entry-summary">
+            <h1 class="product_title entry-title">DERMABRASION</h1>
+            <div>
+                <p class="price">
+                    <span class="woocommerce-Price-amount amount">
+                        <span class="woocommerce-Price-currencySymbol">IDR </span>25.41
+                    </span><br>
+                    <span style="color: black">Estimate Time: </span> 45 minutes
+                </p>
+            </div>
+            <div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
+                </p>
+            </div>
+            <form class="cart" method="post" enctype='multipart/form-data'>
+                <div class="quantity">
+                    <input type="number" step="1" min="1" max="999" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="[0-9]*" inputmode="numeric" />
+                </div>
+                <input type="hidden" name="add-to-cart" value="#" />
+                <input placeholder="masukkan tanggal Awal" type="text" class="form-control datepicker" name="tgl_awal">
+                <button type="submit" class="single_add_to_cart_button button alt" disabled>Add to cart</button>
+            </form>
+            <div class="product_meta">
+                <span class="product_id">Product ID:
+                    <span>777</span>
+                </span>
+            </div>
+        </div>
+        <div class="woocommerce-tabs wc-tabs-wrapper">
+            <ul class="tabs wc-tabs">
+                <li class="description_tab">
+                    <a href="#tab-description">Description</a>
+                </li>
+                <li class="reviews_tab">
+                    <a href="#tab-reviews">Terms & Condition</a>
+                </li>
+            </ul>
+            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab" id="tab-description">
+                <h3>About This Service</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
+                </p>
+
+                <h3>What Can I Expect</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
+                </p>
+
+                <h3>About This Service</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+                    Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                    Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse.
+                </p>
+            </div>
+            <div class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab" id="tab-reviews">
+                <ol class="sc_list sc_list_style_ol">
+                    <li class="sc_list_item">
+                        <div class="text_column content_element">
                             <div class="wrapper">
-                                <!-- content -->
-                                <div id="sc_blogger_321" class="sc_blogger layout_masonry_4 template_masonry sc_blogger_horizontal no_description">
-                                    <h6 class="sc_blogger_subtitle sc_item_subtitle">Here We Go</h6>
-                                    <h2 class="sc_blogger_title sc_item_title">Book Now</h2>
-                                </div>
-                                <div class="sc_empty_space em_height_6">
-                                    <span class="sc_empty_space_inner"></span>
-                                </div>
-                            </div>
-                          </div>
-                      </div>
-                  </div>
-                    <div class="sc_row-full-width"></div>
-                    <div class="sc_row row">
-                        <div class="column sc_column_container sc_col-sm-12">
-                            <div class="sc_column-inner ">
-                                <div class="wrapper">
-                                    <a href="#" class="sc_icon icon-up sc_icon_shape_square aligncenter scroll_to_top show"></a>
-                                    <div class="sc_empty_space em_height_5-7">
-                                        <span class="sc_empty_space_inner"></span>
-                                    </div>
-                                    <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3">
-                                        <div class="column-1_3 sc_column_item">
-                                            <h5 class="sc_title sc_title_regular sc_align_center">About us</h5>
-                                            <div class="text_column content_element ">
-                                                <div class="wrapper">
-                                                    <p class="cu_text_c">Come in and our therapists provide the perfect treatment. Our massage is specially designed to help you achieve the perfect mind-body harmony</p>
-                                                </div>
-                                            </div>
-                                            <div class="sc_empty_space em_height_3">
-                                                <span class="sc_empty_space_inner"></span>
-                                            </div>
-                                        </div>
-                                        <div class="column-1_3 sc_column_item">
-                                            <h5 class="sc_title sc_title_regular sc_align_center">Open Hours</h5>
-                                            <div class="text_column content_element ">
-                                                <div class="wrapper">
-                                                    <p class="cu_text_c">
-                                                        Mon-Fri: 9 AM &#8211; 6 PM
-                                                        <br/> Saturday: 9 AM &#8211; 4 PM
-                                                        <br/> Sunday: Closed
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="sc_empty_space em_height_3">
-                                                <span class="sc_empty_space_inner"></span>
-                                            </div>
-                                        </div>
-                                        <div class="column-1_3 sc_column_item">
-                                            <h5 class="sc_title sc_title_regular sc_align_center">Contacts</h5>
-                                            <div class="text_column content_element ">
-                                                <div class="wrapper">
-                                                    <p class="cu_text_c">
-                                                        176 W street name, New York, NY 10014
-                                                        <br/> Email: <a href="mailto:info@yoursite.com">info@yoursite.com</a>
-                                                        <br/> Telephone: <a href="tel:+18001234566">+1(800)123-4566</a>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div class="sc_empty_space em_height_3">
-                                                <span class="sc_empty_space_inner"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="sc_line sc_line_position_center_center sc_line_style_solid"></div>
-                                    <div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_small cu_block_3">
-                                        <div class="sc_socials_item">
-                                            <a href="#" target="_blank" class="social_icons social_twitter">
-                                                <span class="icon-twitter"></span>
-                                            </a>
-                                        </div>
-                                        <div class="sc_socials_item">
-                                            <a href="#" target="_blank" class="social_icons social_facebook">
-                                                <span class="icon-facebook"></span>
-                                            </a>
-                                        </div>
-                                        <div class="sc_socials_item">
-                                            <a href="#" target="_blank" class="social_icons social_instagramm">
-                                                <span class="icon-instagramm"></span>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <p class="cu_text_c">
-                                        <a href="#">Metime </a>&#169; 2021 All Rights Reserved
-                                        <a href="#">Terms of Use</a> and
-                                        <a href="#">Privacy Policy</a>
-                                    </p>
-                                    <div class="sc_empty_space em_height_4-2">
-                                        <span class="sc_empty_space_inner"></span>
-                                    </div>
-                                </div>
+                                <p>Lorem ipsum dolor sit amet.</p>
                             </div>
                         </div>
+                    </li>
+                    <li class="sc_list_item">
+                        <div class="text_column content_element">
+                            <div class="wrapper">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="sc_list_item">
+                        <div class="text_column content_element">
+                            <div class="wrapper">
+                                <p>Lorem ipsum dolor sit amet.</p>
+                            </div>
+                        </div>
+                    </li>
+                </ol>
+            </div>
+        </div>
+        <div class="related products">
+            <h2>Related Products</h2>
+            <ul class="products">
+                <li class="product column-1_4 instock">
+                    <div class="post_item_wrap">
+                        <div class="post_featured">
+                            <div class="post_thumb">
+                                <div class="button_container">
+                                    <a class="button view_link" href="single-product.html">View</a>
+                                </div>
+                                <div class="button_container cart"></div>
+                                <img width="391" height="500" src="images/391x500.jpg" class="attachment-shop_catalog size-shop_catalog " alt="" title="3473311421005_95" />
+                                <a rel="nofollow" href="single-product.html" data-quantity="1" data-product_id="337" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <h3>
+                                <a href="single-product.html">Masque Contour des Yeux</a>
+                            </h3>
+                            <span class="price">
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">&pound;</span>25.00
+                                </span>
+                            </span>
+                        </div>
                     </div>
-                </section>
-            </article>
+                </li>
+                <li class="product column-1_4 instock">
+                    <div class="post_item_wrap">
+                        <div class="post_featured">
+                            <div class="post_thumb">
+                                <div class="button_container">
+                                    <a class="button view_link" href="single-product.html">View</a>
+                                </div>
+                                <div class="button_container cart"></div>
+                                <img width="391" height="500" src="images/391x500.jpg" class="attachment-shop_catalog size-shop_catalog " alt="" title="3473311504060-hd" />
+                                <a rel="nofollow" href="single-product.html" data-quantity="1" data-product_id="332" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <h3>
+                                <a href="single-product.html">The Supreme Skin Care</a>
+                            </h3>
+                            <span class="price">
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">&pound;</span>47.00
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="product column-1_4 instock">
+                    <div class="post_item_wrap">
+                        <div class="post_featured">
+                            <div class="post_thumb">
+                                <div class="button_container">
+                                    <a class="button view_link" href="single-product.html">View</a>
+                                </div>
+                                <div class="button_container cart"></div>
+                                <img width="391" height="500" src="images/391x500.jpg" class="attachment-shop_catalog size-shop_catalog " alt="" title="huile_pr_cieuse_-_beaut_stars_2015_-_zoom_fiche" />
+                                <a rel="nofollow" href="single-product.html" data-quantity="1" data-product_id="342" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <h3>
+                                <a href="single-product.html">BLACK ROSE FACE OIL</a>
+                            </h3>
+                            <span class="price">
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">&pound;</span>63.00
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="product column-1_4 instock">
+                    <div class="post_item_wrap">
+                        <div class="post_featured">
+                            <div class="post_thumb">
+                                <div class="button_container animate animateOut">
+                                    <a class="button view_link" href="single-product.html">View</a>
+                                    <a class="button view_link clone" href="single-product.html">View</a>
+                                </div>
+                                <div class="button_container cart">
+                                    <a rel="nofollow" href="single-product.html" data-quantity="1" data-product_id="758" data-product_sku="" class="button product_type_simple add_to_cart_button ajax_add_to_cart">Add to cart</a>
+                                </div>
+                                <img width="391" height="500" src="images/391x500.jpg" class="attachment-shop_catalog size-shop_catalog wp-post-image" alt="" title="image1xxl (1)">
+                            </div>
+                        </div>
+                        <div class="post_content">
+                            <h3>
+                                <a href="single-product.html">EAU DU SOIR SCENTED SOAP</a>
+                            </h3>
+                            <span class="price">
+                                <span class="woocommerce-Price-amount amount">
+                                    <span class="woocommerce-Price-currencySymbol">£</span>10.00
+                                </span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
         </div>
     </div>
-</div>
+</article>
 
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/jquery.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/woo/add-to-cart.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/woo/woocommerce-add-to-cart.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/modernizr.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/prettyPhoto/jquery.prettyPhoto.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/prettyPhoto/jquery.prettyPhoto.init.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/woo/single-product.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/woo/jquery.blockUI.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/woo/woocommerce.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/woo/jquery.cookie.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/woo/cart-fragments.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/superfish.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery.slidemenu.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/custom/core.utils.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/custom/core.init.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/custom/theme.init.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/social-share.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/custom/theme.shortcodes.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/custom/core.messages.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/grid.layout/grid.layout.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/widget.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/mouse.min.js?ver=1.11.4'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/slider.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/jquery-ui-touch-punch.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/price-slider.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/core.min.js'></script>
+<script type='text/javascript' src='assets/jacqueline/js/vendor/jquery/tabs.min.js'></script>
 
 @endsection

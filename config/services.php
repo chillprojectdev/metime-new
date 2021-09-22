@@ -31,9 +31,9 @@ return [
     ],
 
     'firebase' => [
-        'api_key' => 'api_key', // Only used from JS integration
-        'auth_domain' => 'auth_domain', // Only used from JS integration
-        'database_url' => 'https://database_url.com/',
-        'storage_bucket' => '', // Only used from JS integration
+        'api_key' => 'AIzaSyBvHR4eW9WK-raKRcZzpzaRLsEzWNR80qI', // Only used from JS integration
+        'auth_domain' => 'metime-81b42.firebaseapp.com', // Only used from JS integration
+        'database_url' => 'https://metime-81b42.firebaseio.com',
+        'storage_bucket' => 'metime-81b42.appspot.com', // Only used from JS integration
     ],
 ];

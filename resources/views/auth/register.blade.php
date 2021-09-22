@@ -17,14 +17,14 @@
                                 <p class="mb-30 text-center">Create your account and start your journey</p>
                                 <div class="form-row">
                                         <div class="col-md-6 form-group">
-                                            <input class="form-control" placeholder="First name" value="" name="first_name" type="text">
+                                            <input class="form-control" placeholder="First name" value="{{ old('first_name') }}" name="first_name" type="text">
                                         </div>
                                         <div class="col-md-6 form-group">
-                                            <input class="form-control" placeholder="Last name" value="" name="last_name" type="text">
+                                            <input class="form-control" placeholder="Last name" value="{{ old('last_name') }}" name="last_name" type="text">
                                         </div>
                                 </div>
                                 <div class="form-group">
-                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Name" required autocomplete="name" autofocus>
+                                    <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" placeholder="Username" required autocomplete="name" autofocus>
                                     @error('name')
                                         <span class="invalid-feedback" role="alert">
                                             <strong>{{ $message }}</strong>
@@ -40,6 +40,10 @@
                                             <strong>{{ $message }}</strong>
                                         </span>
                                     @enderror
+                                </div>
+
+                                <div class="form-group">
+                                    <input id="no_hp" type="text" placeholder="No. Handphone" class="form-control" name="no_hp" value="{{ old('no_hp') }}" required autocomplete="no_hp">
                                 </div>
 
                                 <div class="form-group">

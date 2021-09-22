@@ -1,6 +1,6 @@
 @extends('layouts.app_main')
 
-@section('content')
+@section('slider')
 <section class="slider_wrap slider_fullwide slider_engine_revo slider_alias_home-1">
     <div id="rev_slider_1_1_wrapper" class="rev_slider_wrapper fullwidthbanner-container">
         <div id="rev_slider_1_1" class="rev_slider fullwidthabanner" data-version="5.2.6">
@@ -14,9 +14,9 @@
         </div>
     </div>
 </section>
-<div class="page_content_wrap page_paddings_no">
-    <div class="content_wrap">
-        <div class="content">
+@endsection
+
+    @section('content')
             <article class="post_item post_item_single page">
                 <section class="post_content">
                     <div data-sc-full-width="true" data-sc-full-width-init="false" class="sc_row row sc_custom_1459259915855">
@@ -213,57 +213,7 @@
                         </div>
                     </div>
                     
-                    <!-- <div data-sc-full-width="true" data-sc-full-width-init="false" class="sc_row row sc_custom_1459330954110 scheme_original inverse_colors">
-                        <div class="column sc_column_container sc_col-sm-12">
-                            <div class="sc_column-inner ">
-                                <div class="wrapper">
-                                    <div class="columns_wrap sc_columns columns_nofluid custom_columns_brands equal_height">
-                                        <div class="column-1_4 sc_column_item">
-                                            <div class="sc_column_item_inner">
-                                                <h6 class="sc_title sc_title_regular">We use products of the best brands only</h6>
-                                            </div>
-                                        </div>
-                                        <div class="column-3_4 sc_column_item span_3">
-                                            <div id="sc_clients_387_wrap" class="sc_clients_wrap">
-                                                <div id="sc_clients_387" class="sc_clients sc_clients_style_clients-1 cu_fullwidth">
-                                                    <div class="sc_slider_swiper swiper-slider-container sc_slider_nopagination sc_slider_nocontrols" data-interval="9415" data-slides-per-view="3" data-slides-min-width="100">
-                                                        <div class="slides swiper-wrapper">
-                                                            <div class="swiper-slide" data-style="width:100%;">
-                                                                <div id="sc_clients_387_1" class="sc_clients_item">
-                                                                    <div class="sc_client_image">
-                                                                        <img alt="" src="assets/jacqueline/images/logo-4.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="swiper-slide" data-style="width:100%;">
-                                                                <div id="sc_clients_387_2" class="sc_clients_item">
-                                                                    <div class="sc_client_image">
-                                                                        <img alt="" src="assets/jacqueline/images/logo-2.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="swiper-slide" data-style="width:100%;">
-                                                                <div id="sc_clients_387_3" class="sc_clients_item">
-                                                                    <div class="sc_client_image">
-                                                                        <img alt="" src="assets/jacqueline/images/logo-1.png">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="sc_slider_controls_wrap">
-                                                            <a class="sc_slider_prev" href="#"></a>
-                                                            <a class="sc_slider_next" href="#"></a>
-                                                        </div>
-                                                        <div class="sc_slider_pagination_wrap"></div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div> -->
+                    
                     <div class="sc_row-full-width"></div>
                     <div data-sc-full-width="true" data-sc-full-width-init="false" class="sc_row row sc_custom_1459343317996">
                         <div class="column sc_column_container sc_col-sm-12" >
@@ -643,9 +593,6 @@
                     <div class="sc_row-full-width"></div>
                 </section>
             </article>
-        </div>
-    </div>
-</div>
 
 <script type='text/javascript' src='app.js'></script>
 

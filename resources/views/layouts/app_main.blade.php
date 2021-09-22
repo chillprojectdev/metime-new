@@ -28,6 +28,7 @@
     <link rel='stylesheet' href='assets/jacqueline/css/custom.css' type='text/css' media='all' />
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/album/">
     <link href="assets/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    @yield('style')
 
 
 </head>
@@ -206,97 +207,107 @@
         <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
             @csrf
         </form>
-        @yield('content')
-        
-        <!-- footer -->
-        <div class="sc_row-full-width"></div>
-        <div class="sc_row row">
-            <div class="column sc_column_container sc_col-sm-12">
-                <div class="sc_column-inner ">
-                    <div class="wrapper">
-                        @php
-                            $hide_icon_up_ = isset($hide_icon_up) ? $hide_icon_up : false;
-                        @endphp
-                        @if (!$hide_icon_up_)
-                        <a href="#" class="sc_icon icon-up sc_icon_shape_square aligncenter scroll_to_top show"></a>
-                        @endif
-                        <div class="sc_empty_space em_height_5-7">
-                            <span class="sc_empty_space_inner"></span>
-                        </div>
-                        <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3">
-                            <div class="column-1_3 sc_column_item">
-                                <h5 class="sc_title sc_title_regular sc_align_center">About us</h5>
-                                <div class="text_column content_element ">
-                                    <div class="wrapper">
-                                        <p class="cu_text_c">Come in and our therapists provide the perfect treatment. Our massage is specially designed to help you achieve the perfect mind-body harmony</p>
+        @yield('slider')
+        <div class="page_content_wrap page_paddings_no">
+            <div class="content_wrap">
+                <div class="content">
+                    @yield('content')
+
+                    <!-- footer -->
+                    <div class="sc_row-full-width"></div>
+                    <div class="sc_row row">
+                        <div class="column sc_column_container sc_col-sm-12">
+                            <div class="sc_column-inner ">
+                                <div class="wrapper">
+                                    @php
+                                        $hide_icon_up_ = isset($hide_icon_up) ? $hide_icon_up : false;
+                                    @endphp
+                                    @if (!$hide_icon_up_)
+                                    <a href="#" class="sc_icon icon-up sc_icon_shape_square aligncenter scroll_to_top show"></a>
+                                    @endif
+                                    <div class="sc_empty_space em_height_5-7">
+                                        <span class="sc_empty_space_inner"></span>
+                                    </div>
+                                    <div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3">
+                                        <div class="column-1_3 sc_column_item">
+                                            <h5 class="sc_title sc_title_regular sc_align_center">About us</h5>
+                                            <div class="text_column content_element ">
+                                                <div class="wrapper">
+                                                    <p class="cu_text_c">Come in and our therapists provide the perfect treatment. Our massage is specially designed to help you achieve the perfect mind-body harmony</p>
+                                                </div>
+                                            </div>
+                                            <div class="sc_empty_space em_height_3">
+                                                <span class="sc_empty_space_inner"></span>
+                                            </div>
+                                        </div>
+                                        <div class="column-1_3 sc_column_item">
+                                            <h5 class="sc_title sc_title_regular sc_align_center">Open Hours</h5>
+                                            <div class="text_column content_element ">
+                                                <div class="wrapper">
+                                                    <p class="cu_text_c">
+                                                        Mon-Fri: 9 AM &#8211; 6 PM
+                                                        <br/> Saturday: 9 AM &#8211; 4 PM
+                                                        <br/> Sunday: Closed
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="sc_empty_space em_height_3">
+                                                <span class="sc_empty_space_inner"></span>
+                                            </div>
+                                        </div>
+                                        <div class="column-1_3 sc_column_item">
+                                            <h5 class="sc_title sc_title_regular sc_align_center">Contacts</h5>
+                                            <div class="text_column content_element ">
+                                                <div class="wrapper">
+                                                    <p class="cu_text_c">
+                                                        176 W street name, New York, NY 10014
+                                                        <br/> Email: <a href="mailto:info@yoursite.com">info@yoursite.com</a>
+                                                        <br/> Telephone: <a href="tel:+18001234566">+1(800)123-4566</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div class="sc_empty_space em_height_3">
+                                                <span class="sc_empty_space_inner"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="sc_line sc_line_position_center_center sc_line_style_solid"></div>
+                                    
+                                    <div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_small cu_block_3">
+                                        <div class="sc_socials_item">
+                                            <a href="#" target="_blank" class="social_icons social_twitter">
+                                                <span class="icon-twitter"></span>
+                                            </a>
+                                        </div>
+                                        <div class="sc_socials_item">
+                                            <a href="#" target="_blank" class="social_icons social_facebook">
+                                                <span class="icon-facebook"></span>
+                                            </a>
+                                        </div>
+                                        <div class="sc_socials_item">
+                                            <a href="#" target="_blank" class="social_icons social_instagramm">
+                                                <span class="icon-instagramm"></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <p class="cu_text_c">
+                                        <a href="#">Metime </a>&#169; 2021 All Rights Reserved
+                                        <a href="#">Terms of Use</a> and
+                                        <a href="#">Privacy Policy</a>
+                                    </p>
+                                    <div class="sc_empty_space em_height_4-2">
+                                        <span class="sc_empty_space_inner"></span>
                                     </div>
                                 </div>
-                                <div class="sc_empty_space em_height_3">
-                                    <span class="sc_empty_space_inner"></span>
-                                </div>
                             </div>
-                            <div class="column-1_3 sc_column_item">
-                                <h5 class="sc_title sc_title_regular sc_align_center">Open Hours</h5>
-                                <div class="text_column content_element ">
-                                    <div class="wrapper">
-                                        <p class="cu_text_c">
-                                            Mon-Fri: 9 AM &#8211; 6 PM
-                                            <br/> Saturday: 9 AM &#8211; 4 PM
-                                            <br/> Sunday: Closed
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="sc_empty_space em_height_3">
-                                    <span class="sc_empty_space_inner"></span>
-                                </div>
-                            </div>
-                            <div class="column-1_3 sc_column_item">
-                                <h5 class="sc_title sc_title_regular sc_align_center">Contacts</h5>
-                                <div class="text_column content_element ">
-                                    <div class="wrapper">
-                                        <p class="cu_text_c">
-                                            176 W street name, New York, NY 10014
-                                            <br/> Email: <a href="mailto:info@yoursite.com">info@yoursite.com</a>
-                                            <br/> Telephone: <a href="tel:+18001234566">+1(800)123-4566</a>
-                                        </p>
-                                    </div>
-                                </div>
-                                <div class="sc_empty_space em_height_3">
-                                    <span class="sc_empty_space_inner"></span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="sc_line sc_line_position_center_center sc_line_style_solid"></div>
-                        
-                        <div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_small cu_block_3">
-                            <div class="sc_socials_item">
-                                <a href="#" target="_blank" class="social_icons social_twitter">
-                                    <span class="icon-twitter"></span>
-                                </a>
-                            </div>
-                            <div class="sc_socials_item">
-                                <a href="#" target="_blank" class="social_icons social_facebook">
-                                    <span class="icon-facebook"></span>
-                                </a>
-                            </div>
-                            <div class="sc_socials_item">
-                                <a href="#" target="_blank" class="social_icons social_instagramm">
-                                    <span class="icon-instagramm"></span>
-                                </a>
-                            </div>
-                        </div>
-                        <p class="cu_text_c">
-                            <a href="#">Metime </a>&#169; 2021 All Rights Reserved
-                            <a href="#">Terms of Use</a> and
-                            <a href="#">Privacy Policy</a>
-                        </p>
-                        <div class="sc_empty_space em_height_4-2">
-                            <span class="sc_empty_space_inner"></span>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        
+        <!-- footer -->
+        
     </div>
 </div>
 

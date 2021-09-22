@@ -19,7 +19,7 @@
     .username {
         color: #E26169;
         font-weight: bold;
-        font-size: 1.5rem;
+        font-size: 1.2rem;
     }
     .mt-accordion-item {
         background-color: white;
@@ -63,8 +63,8 @@
                                                                     </div>
                                                                     <div style="text-align: left; height: auto;">
                                                                     <p>
-                                                                        <span class="username">Username</span><br/>
-                                                                    <span>username@gmail.com</span>
+                                                                        <span class="username">{{ Auth::user()->displayName }}</span><br/>
+                                                                    <span>{{ Auth::user()->email}}</span>
                                                                     </p>
                                                                     </div>
                                                                 </div>
@@ -99,40 +99,40 @@
                                                                 <div class="row">
                                                                     <div class="column col-md-6" style=" text-align: left">
                                                                         Firstname
-                                                                        <p class="user-information">Nadya</p>
+                                                                        <p class="user-information">{{ $profile['first_name']}}</p>
                                                                         <hr/>
                                                                     </div>
 
                                                                     <div class="column col-md-6" style="text-align: left">
                                                                         Lastname
-                                                                        <p class="user-information">Septy</p>
+                                                                        <p class="user-information">{{ $profile['last_name']}}</p>
                                                                         <hr/>
                                                                     </div>
                                                                 </div>
                                                                 <div class='row'>
                                                                     <div class="column col-md-12" style=" text-align: left">
                                                                         Email
-                                                                        <p class="user-information">nadyasepti@gmail.com</p>
+                                                                        <p class="user-information">{{ $profile['email']}}</p>
                                                                         <hr/>
                                                                     </div>
                                                                 </div>
                                                                 <div class="row">
                                                                     <div class="column col-md-6" style=" text-align: left">
                                                                         Gender
-                                                                        <p class="user-information">Female</p>
+                                                                        <p class="user-information">{{ $profile['gender']}}</p>
                                                                         <hr/>
                                                                     </div>
 
                                                                     <div class="column col-md-6" style="text-align: left">
                                                                         Phone
-                                                                        <p class="user-information">(+62) 87387736129</p>
+                                                                        <p class="user-information">{{ $profile['no_hp']}}</p>
                                                                         <hr/>
                                                                     </div>
                                                                 </div>
                                                                 <div class='row'>
                                                                     <div class="column col-md-12" style=" text-align: left">
                                                                         Address
-                                                                        <p class="user-information">Jl. G. Lowokwaru Blok X No.5</p>
+                                                                        <p class="user-information">{{ $profile['address']}}</p>
                                                                         <hr/>
                                                                     </div>
                                                                 </div>

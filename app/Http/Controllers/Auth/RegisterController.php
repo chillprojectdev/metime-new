@@ -12,6 +12,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Kreait\Firebase\Auth as FirebaseAuth;
 use Kreait\Firebase\Exception\FirebaseException;
+use App\Models\UserData;
 
 class RegisterController extends Controller
 {
@@ -56,6 +57,12 @@ class RegisterController extends Controller
           'disabled' => false,
        ];
        $createdUser = $this->auth->createUser($userProperties);
-       return redirect()->route('login');
+       if ($createdUser) {
+         UserData::createUser($createdUser->{'uid'}, $request);
+         return redirect()->route('login');
+       } else {
+         return redirect()->route('register');
+       }
+       
     }
  }

@@ -42,3 +42,26 @@ Route::get('/test_bootstrap', function () {
 });
 
 Route::get('/profile', [App\Http\Controllers\UserController::class, 'profile'])->name('profile');
+
+
+// ADMIN ROUTE
+
+Route::get('/metime-admin', function () {
+    return view('admin.auth.login');
+});
+
+Route::get('/dashboard-admin', [App\Http\Controllers\AdminController::class, 'index'])->name('admin.dashboard');
+
+Route::get('/customers-admin', [App\Http\Controllers\AdminCustomersController::class, 'index'])->name('admin.customers');
+
+Route::get('/treatments-admin', [App\Http\Controllers\AdminTreatmentsController::class, 'index'])->name('admin.treatments');
+
+Route::post('/treatments-admin/create', [App\Http\Controllers\AdminTreatmentsController::class, 'createTreatment'])->name('admin.createTreatment');
+
+Route::post('/treatments-admin/update', [App\Http\Controllers\AdminTreatmentsController::class, 'updateTreatment'])->name('admin.updateTreatment');
+
+Route::post('/treatments-admin/delete', [App\Http\Controllers\AdminTreatmentsController::class, 'deleteTreatment'])->name('admin.deleteTreatment');
+
+
+Route::get('/treatments-admin/getKey', [App\Http\Controllers\AdminTreatmentsController::class, 'getKey'])->name('admin.getKey');
+

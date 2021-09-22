@@ -10,9 +10,6 @@
         font-size: 11px;
       }
     </style>
-        <div class="page_content_wrap page_paddings_no">
-            <div class="content_wrap">
-                <div class="content">
                     <article class="post_item post_item_single page">
                         <section class="post_content">
                           <div data-sc-full-width="true" data-sc-full-width-init="false" class="sc_row row sc_custom_1459259915855">
@@ -322,9 +319,6 @@
                             </div>
                         </section>
                     </article>
-                </div>
-            </div>
-        </div>
 
 <script type='text/javascript' src='app.js'></script>
 
